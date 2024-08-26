@@ -2005,6 +2005,18 @@ bZqHsIFSTwAAAABJRU5ErkJggg==" alt="Top Image" id="top-image">
             document.getElementById('display-page').style.display = 'block';
         });
 
+        // 获取当前日期
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // 月份从0开始
+        const day = String(today.getDate()).padStart(2, '0');
+
+        // 格式化日期为 "YYYY年MM月DD日"
+        const formattedDate = `${year}年${month}月${day}日`;
+
+        // 将格式化后的日期插入到div中
+        document.getElementById('current-date').textContent = formattedDate;
+
         function updateTime() {
             const now = new Date();
 
